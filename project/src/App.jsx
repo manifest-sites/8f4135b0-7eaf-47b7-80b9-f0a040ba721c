@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Monetization from './components/monetization/Monetization'
+import WorkoutTracker from './components/WorkoutTracker'
 import FlashCardApp from './components/FlashCardApp'
 import About from './components/About'
 import Navigation from './components/Navigation'
@@ -13,7 +14,8 @@ function App() {
       <Router basename={getRouterBasename()}>
         <Navigation />
         <Routes>
-          <Route path="/" element={<FlashCardApp />} />
+          <Route path="/" element={<WorkoutTracker />} />
+          <Route path="/flashcards" element={<FlashCardApp />} />
           <Route path="/about" element={<About />} />
         </Routes>
       </Router>

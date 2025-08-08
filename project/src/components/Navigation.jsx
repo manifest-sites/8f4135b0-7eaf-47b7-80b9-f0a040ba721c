@@ -16,6 +16,16 @@ function Navigation() {
                 : 'border-transparent text-gray-300 hover:text-white hover:border-gray-300'
             }`}
           >
+            Workout Tracker
+          </Link>
+          <Link 
+            to="/flashcards" 
+            className={`py-4 px-6 border-b-2 transition-colors ${
+              location.pathname === '/flashcards' 
+                ? 'border-white text-white' 
+                : 'border-transparent text-gray-300 hover:text-white hover:border-gray-300'
+            }`}
+          >
             Flash Cards
           </Link>
           <Link 

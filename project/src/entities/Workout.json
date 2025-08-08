@@ -1,0 +1,68 @@
+{
+  "name": "Workout",
+  "type": "object",
+  "properties": {
+    "userId": {
+      "type": "number",
+      "description": "Unique identifier for the user who owns the workout"
+    },
+    "id": {
+      "type": "number",
+      "description": "Unique identifier for the workout"
+    },
+    "date": {
+      "type": "string",
+      "description": "Date of the workout in ISO format"
+    },
+    "name": {
+      "type": "string",
+      "description": "Name/title of the workout"
+    },
+    "exercises": {
+      "type": "array",
+      "description": "List of exercises performed in the workout",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the exercise"
+          },
+          "sets": {
+            "type": "array",
+            "description": "List of sets performed for this exercise",
+            "items": {
+              "type": "object",
+              "properties": {
+                "reps": {
+                  "type": "number",
+                  "description": "Number of repetitions"
+                },
+                "weight": {
+                  "type": "number",
+                  "description": "Weight used in pounds or kg"
+                },
+                "duration": {
+                  "type": "number",
+                  "description": "Duration in seconds for time-based exercises"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "duration": {
+      "type": "number",
+      "description": "Total workout duration in minutes"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes about the workout"
+    }
+  },
+  "required": [
+    "date",
+    "name"
+  ]
+}
